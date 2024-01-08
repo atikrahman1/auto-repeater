@@ -48,8 +48,8 @@ public class LogTableModel extends AbstractTableModel {
   }
 
   public ArrayList<LogEntry> getLog() {
-      //return log;
-      return log;
+    //return log;
+    return log;
   }
 
   public ArrayList<LogEntry> getFilteredLogs() {
@@ -69,7 +69,7 @@ public class LogTableModel extends AbstractTableModel {
 
   @Override
   public int getColumnCount() {
-    return 8;
+    return 11;
   }
 
   @Override
@@ -91,6 +91,12 @@ public class LogTableModel extends AbstractTableModel {
         return "Resp. Len.";
       case 7:
         return "Resp. Len. Diff.";
+      case 8:
+        return "Orig. Res. Time";
+      case 9:
+        return "Mod. Res. Time";
+      case 10:
+        return "Time diff";
       default:
         return "";
     }
@@ -115,6 +121,12 @@ public class LogTableModel extends AbstractTableModel {
         return Integer.class;
       case 7:
         return Integer.class;
+      case 8:
+        return String.class;
+      case 9:
+        return String.class;
+      case 10:
+        return long.class;
       default:
         return null;
     }
@@ -142,6 +154,12 @@ public class LogTableModel extends AbstractTableModel {
         return logEntry.getModifiedLength();
       case 7:
         return logEntry.getLengthDifference();
+      case 8:
+        return logEntry.getOriginalDateHeaderValue();
+      case 9:
+        return logEntry.getModifiedDateHeaderValue();
+      case 10:
+        return logEntry.getTimeDifference();
       default:
         return "";
     }
