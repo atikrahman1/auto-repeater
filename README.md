@@ -1,4 +1,4 @@
-# AutoRepeater: Automated HTTP Request Repeating With Burp Suite
+# AutoRepeater: Automated HTTP Request Repeating With Burp Suite added Response time
 
 I have added a Request Response Time field to detect Time-based Blind SQL injection easily. I have customized this version to automate the process of finding blind SQL injection. If you find it useful, feel free to use it. If you want to make any updates, you can either make a pull request or send me a direct message. [atikqur007](https://twitter.com/atikqur007)
 
